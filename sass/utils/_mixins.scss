@@ -1,0 +1,92 @@
+@mixin btn {
+  @include button-shadow;
+  color: $white-color;
+  width: 220px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: $primary-color;
+  background-image: linear-gradient(
+    to right bottom,
+    $secondary-color,
+    $primary-color
+  );
+  cursor: pointer;
+  margin: auto;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: none;
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+    & {
+      @include button-shadow(
+        $primary-color,
+        $shadow-size,
+        $shadow-size,
+        $shadow-blur * 2
+      );
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $primary-color;
+    background-image: linear-gradient(
+      to right bottom,
+      darken($secondary-color, 10),
+      darken($primary-color, 10)
+    );
+    opacity: 1;
+    z-index: -1;
+    transition: opacity 250ms;
+  }
+}
+
+@mixin button-shadow(
+  $colour: lightness-shift($primary-color),
+  $h-offset: $shadow-size,
+  $v-offset: $shadow-size,
+  $blur: $shadow-blur
+) {
+  box-shadow: $h-offset $v-offset $blur $colour;
+}
+
+@mixin fonctionnement__bouton--info {
+  height: 75px;
+  position: relative;
+  background-color: $background-color;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  span {
+    display: block;
+    position: absolute;
+
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    left: -13px;
+    top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate();
+    background-color: $primary-color;
+  }
+  i {
+    margin-left: 35px;
+    margin-right: 20px;
+  }
+}

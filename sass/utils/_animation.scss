@@ -16,7 +16,7 @@
   animation: loader;
   animation-delay: 3s;
   animation-fill-mode: both;
-  z-index: 1;
+  z-index: 999999;
 }
 .lettre {
   font-size: 80px;
