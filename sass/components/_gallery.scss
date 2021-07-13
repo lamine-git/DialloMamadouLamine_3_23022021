@@ -1,0 +1,54 @@
+.gallery {
+  background-color: $white-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin-bottom: 15px;
+  position: relative;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .nouveau {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 20px;
+    padding: 7px;
+    background-color: $tertiary-color; //#99e2d0;
+    font-weight: bold;
+    color: #30685a;
+    text-align: center;
+  }
+}
+
+.gallery:hover {
+  .desc i {
+    color: $primary-color;
+  }
+}
+
+.gallery img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.desc {
+  padding: 15px;
+  &__title {
+    margin-bottom: 3px;
+    margin-top: 0px;
+    font-weight: bold;
+  }
+  &__loc {
+    margin: 0px;
+  }
+  position: relative;
+  i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+  }
+}

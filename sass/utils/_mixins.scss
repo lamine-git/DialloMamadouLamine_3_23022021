@@ -89,4 +89,9 @@
     margin-left: 35px;
     margin-right: 20px;
   }
+  &:hover {
+    i {
+      color: $primary-color;
+    }
+  }
 }

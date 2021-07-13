@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ofmyfood</title>
     <link rel="stylesheet" href="./public/styles.css" />
+    <link rel="stylesheet" href="./images/icones/font/css/all.css" />
   </head>
   <body>
     <div class="loader">
@@ -53,19 +54,19 @@
         <div class="fonctionnement">
           <p class="fonctionnement__titre">Fonctionnement</p>
           <div class="fonctionnement__bouton">
-            <div class="fonctionnement__bouton--info">
+            <div class="fonctionnement__bouton--info btn--1">
               <span>1</span>
               <i class="fas fa-mobile-alt"></i>
               <div class="p">Choisissez un restaurant</div>
             </div>
 
-            <div class="fonctionnement__bouton--info">
+            <div class="fonctionnement__bouton--info btn--2">
               <span>2</span>
               <i class="fas fa-list-ul"></i>
               <div class="p">Composez vore menu</div>
             </div>
 
-            <div class="fonctionnement__bouton--info active">
+            <div class="fonctionnement__bouton--info active btn--3">
               <span>3</span>
               <i class="fas fa-store"></i>
               <div class="p">Dégustez au restaurant</div>
@@ -74,5 +75,98 @@
         </div>
       </div>
     </section>
+
+    <!----------RESTAURANT  RESTAURANT  RESTAURANT  RESTAURANT----------->
+    <section id="nosrestaurant">
+      <div class="nosrestaurant">
+        <h2>Restaurants</h2>
+
+        <div class="responsive">
+          <div class="responsive--1">
+            <div class="gallery">
+              <a target="_blank" href="la_palette_du_gout.html">
+                <img
+                  src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="cuisine"
+                />
+
+                <div class="desc">
+                  <p class="desc__title">La palette du goût</p>
+                  <p class="desc__loc">Ménilmontant</p>
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="nouveau">Nouveau</div>
+              </a>
+            </div>
+
+            <div class="gallery">
+              <a target="_blank" href="la_note_enchantee.html">
+                <img
+                  src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                  alt="cuisine"
+                />
+
+                <div class="desc">
+                  <p class="desc__title">La note enchantée</p>
+                  <p class="desc__loc">Charonne</p>
+                  <i class="char fas fa-heart"></i>
+                </div>
+                <div class="nouveau">Nouveau</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="responsive--2">
+            <div class="gallery">
+              <a target="_blank" href="alafrancaise.html">
+                <img
+                  src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                  alt="cuisine à la française"
+                />
+
+                <div class="desc">
+                  <p class="desc__title">A la française</p>
+                  <p class="desc__loc">Cité Rouge</p>
+                  <i class="cite fas fa-heart"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="gallery">
+              <a target="_blank" href="le_delice_des_sens.html">
+                <img
+                  src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                  alt="cuisine"
+                />
+                <div class="desc">
+                  <p class="desc__title">Le délice des sens</p>
+                  <p class="desc__loc">Folie-Méricourt</p>
+                  <i class="foli fas far fa-heart"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="container__footer">
+      <footer>
+        <div class="name__web">ofmyfood</div>
+
+        <div class="footer resto">
+          <a href=""><i class="fas fa-utensils"></i> Proposer un restaurant</a>
+        </div>
+        <div class="footer partenaire">
+          <a href=""><i class="fas fa-handshake"></i> Devenir partenaire</a>
+        </div>
+        <div class="footer mention">
+          <a href="#">Mention légales</a>
+        </div>
+        <div class="footer contact">
+          <a href="mailto:leyfello@gmail.com">Contact</a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

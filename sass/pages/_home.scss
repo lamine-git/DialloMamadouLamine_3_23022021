@@ -72,3 +72,33 @@
     }
   }
 }
+
+//@include gallery();
+#nosrestaurant {
+  width: 100%;
+  background-color: $background-color;
+  padding-bottom: 50px;
+}
+.nosrestaurant {
+  max-width: 1199px;
+  margin: auto;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .responsive {
+    display: flex;
+    flex-direction: row;
+    &--1,
+    &--2 {
+      width: 49%;
+      margin: 6px;
+    }
+  }
+}

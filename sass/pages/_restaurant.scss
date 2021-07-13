@@ -1,0 +1,194 @@
+@mixin restaurant {
+  width: 100%;
+  height: auto;
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    img {
+      height: auto;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    img {
+      max-height: 450px;
+      object-fit: cover;
+      object-position: 50% 70%;
+    }
+  }
+}
+
+.restaurant__img {
+  @include restaurant;
+  // position: relative;
+}
+
+.model {
+  max-width: 1199px;
+  position: relative;
+  background-color: #eaeaea; //$background-color;
+  border-radius: 50px 50px 0 0;
+  top: -50px;
+  margin: auto;
+  //height: 100vh;
+  padding-top: 25px;
+  @media screen and (max-width: 767px) {
+    top: -60px;
+    border-radius: 30px 30px 0 0;
+  }
+}
+
+@mixin model__restaurant {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 15px;
+  &--nom {
+    font-family: "shrikhand";
+    font-size: 1.7rem;
+  }
+  &:hover {
+    i {
+      color: $primary-color;
+    }
+  }
+}
+.model__restaurant {
+  @include model__restaurant;
+}
+
+.menu {
+  @media screen and (max-width: 991px) {
+    width: 100%; //350px;
+  }
+  @media screen and (min-width: 992px) {
+    width: 310px;
+  }
+
+  height: 68px;
+  border-radius: $border-radius;
+  background-color: $white-color;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 15px;
+  &:hover {
+    .menu__valide {
+      width: 100px;
+    }
+    span {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &__name {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &--titre {
+      margin: 0px;
+      width: 100%;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &--soustitre {
+      margin: 5px 0px 0px 0px;
+      width: 100%;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  p.price {
+    font-weight: bold;
+  }
+
+  &__valide {
+    width: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $tertiary-color;
+    transition-property: width;
+    transition-duration: 700ms;
+    transition-timing-function: linear;
+    margin-left: 15px;
+
+    span {
+      display: block;
+      transform: scale(0) rotate(-270deg);
+      transition: transform 700ms linear 50ms;
+    }
+
+    i {
+      color: $white-color;
+    }
+  }
+}
+
+.section {
+  &__entree {
+    margin-bottom: 40px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+
+    &--title {
+      position: relative;
+      margin-bottom: 20px;
+
+      &::after {
+        content: "";
+        width: 35px;
+        height: 0.25rem;
+        background-color: $tertiary-color; //#99e2d0;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    margin: 15px;
+  }
+  @media screen and (min-width: 992px) {
+    //width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 15px;
+  }
+}
+
+.commander {
+  &__bouton {
+    @include btn;
+    margin-bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
