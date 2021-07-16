@@ -114,7 +114,7 @@
 }
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 1 rem;
+  font-size: 1rem;
 }
 
 #container__footer {
@@ -271,7 +271,7 @@ footer .name__web {
   font-weight: bold;
 }
 .info__bouton {
-  box-shadow: 2px 2px 5px lightness-shift(#9356dc);
+  box-shadow: 2px 2px 5px #782cd3;
   color: #fff;
   width: 220px;
   height: 50px;
@@ -351,7 +351,6 @@ footer .name__web {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate();
   background-color: #9356dc;
 }
 .fonctionnement__bouton--info i {
@@ -568,7 +567,7 @@ footer .name__web {
 }
 
 .commander__bouton {
-  box-shadow: 2px 2px 5px lightness-shift(#9356dc);
+  box-shadow: 2px 2px 5px #782cd3;
   color: #fff;
   width: 220px;
   height: 50px;
