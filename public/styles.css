@@ -121,7 +121,7 @@ body {
   /*overflow: hidden;*/
   /*width: 100%;*/
   /*height: 196px;*/
-  background-color: black;
+  background-color: #353535;
 }
 
 .footer a {
@@ -132,7 +132,7 @@ body {
 
 footer {
   position: relative;
-  background-color: black;
+  background-color: #353535;
   height: 196px;
   top: -50px;
   /*margin: auto;*/
@@ -208,10 +208,6 @@ footer .name__web {
   text-align: center;
 }
 
-.gallery:hover .desc i {
-  color: #9356dc;
-}
-
 .gallery img {
   width: 100%;
   height: 175px;
@@ -231,10 +227,40 @@ footer .name__web {
 .desc__loc {
   margin: 0px;
 }
-.desc i {
+.desc .icon {
+  width: 2rem;
+  height: 2rem;
   position: absolute;
+  bottom: 15px;
   right: 15px;
-  top: 50%;
+}
+.desc .icon__ceour {
+  position: relative;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 2s;
+}
+.desc .icon__ceour:hover .far {
+  opacity: 0;
+}
+.desc .icon__ceour:hover .fas {
+  opacity: 1;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.desc .icon__ceour .far {
+  opacity: 1;
+  position: absolute;
+}
+.desc .icon__ceour .fas {
+  opacity: 0;
+  color: transparent;
+  position: absolute;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
 }
 
 .header__position {
@@ -338,10 +364,12 @@ footer .name__web {
   display: flex;
   flex-direction: row;
   align-items: center;
+  box-shadow: 2px 2px 5px rgba(147, 86, 220, 0.3);
 }
 .fonctionnement__bouton--info span {
   display: block;
   position: absolute;
+  color: white;
   object-fit: cover;
   width: 30px;
   height: 30px;
@@ -356,6 +384,9 @@ footer .name__web {
 .fonctionnement__bouton--info i {
   margin-left: 35px;
   margin-right: 20px;
+}
+.fonctionnement__bouton--info:hover {
+  background-color: rgba(147, 86, 220, 0.1);
 }
 .fonctionnement__bouton--info:hover i {
   color: #9356dc;
@@ -445,8 +476,39 @@ footer .name__web {
   font-family: "shrikhand";
   font-size: 1.7rem;
 }
-.model__restaurant:hover i {
-  color: #9356dc;
+.model__restaurant .icon {
+  width: 2rem;
+  height: 2rem;
+  bottom: 15px;
+  right: 15px;
+}
+.model__restaurant .icon__ceour {
+  position: relative;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 2s;
+}
+.model__restaurant .icon__ceour:hover .far {
+  opacity: 0;
+}
+.model__restaurant .icon__ceour:hover .fas {
+  opacity: 1;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.model__restaurant .icon__ceour .far {
+  opacity: 1;
+  position: absolute;
+}
+.model__restaurant .icon__ceour .fas {
+  opacity: 0;
+  color: transparent;
+  position: absolute;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
 }
 
 .menu {

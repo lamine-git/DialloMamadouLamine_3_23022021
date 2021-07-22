@@ -49,11 +49,21 @@
     font-family: "shrikhand";
     font-size: 1.7rem;
   }
-  &:hover {
-    i {
-      color: $primary-color;
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    //position: absolute;
+    bottom: 15px;
+    right: 15px;
+    &__ceour {
+      @include coeur;
     }
   }
+  // &:hover {
+  //   i {
+  //     color: $primary-color;
+  //   }
+  // }
 }
 .model__restaurant {
   @include model__restaurant;
