@@ -28,7 +28,8 @@
   background-color: $background-color;
   &__titre {
     margin-bottom: 0px;
-    font-weight: bold;
+    font-weight: 900;
+    font-size: 1.5rem;
   }
   &__bouton {
     @include btn;

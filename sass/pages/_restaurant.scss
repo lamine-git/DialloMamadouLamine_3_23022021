@@ -102,6 +102,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    //align-items: baseline;
     margin: 10px;
     overflow: hidden;
     white-space: nowrap;
@@ -131,8 +132,15 @@
     }
   }
 
-  p.price {
+  &__price {
+    position: relative;
     font-weight: bold;
+    height: 48px;
+    min-width: 26.95px;
+    .price {
+      position: absolute;
+      bottom: -10px;
+    }
   }
 
   &__valide {

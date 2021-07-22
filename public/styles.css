@@ -160,6 +160,7 @@ footer .name__web {
 .header {
   height: 4.2rem;
   width: 100%;
+  box-shadow: 0px 5px 0.5rem -5px rgba(0, 0, 0, 0.25);
   position: relative;
 }
 .header__arrow {
@@ -294,7 +295,8 @@ footer .name__web {
 }
 .info__titre {
   margin-bottom: 0px;
-  font-weight: bold;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 .info__bouton {
   box-shadow: 2px 2px 5px #782cd3;
@@ -573,8 +575,15 @@ footer .name__web {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu p.price {
+.menu__price {
+  position: relative;
   font-weight: bold;
+  height: 48px;
+  min-width: 26.95px;
+}
+.menu__price .price {
+  position: absolute;
+  bottom: -10px;
 }
 .menu__valide {
   width: 0px;
